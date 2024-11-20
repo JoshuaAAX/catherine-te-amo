@@ -88,6 +88,14 @@ const LoveApp = () => {
     <div className="relative min-h-screen bg-pink-50 overflow-hidden">
       {/* Contenedor principal */}
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
+
+        <div className="mb-6">
+          <img 
+            src="/cat.jpg"  // Reemplaza con la ruta de tu imagen
+            alt="Catherine" 
+            className="w-40 h-40 rounded-full object-cover border-4 border-pink-300 shadow-lg"
+          />
+        </div>
         
         <div className= "flex items-center justify-between space-x-5">
         {/* Título */}
