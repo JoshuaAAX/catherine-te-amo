@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 
-const loveQuotes = [
+
+interface FloatingHeartProps {
+  onComplete: () => void;
+}
+
+interface HeartType {
+  id: number;
+}
+const loveQuotes: string[]  = [
   "Te amo más que ayer, menos que mañana",
   "Eres mi sol en los días oscuros",
   "Si tuviera que volver a comenzar mi vida, intentaría encontrarte mucho antes",
@@ -17,11 +25,15 @@ const loveQuotes = [
   "Ojalá estuvieras aquí conmigo, o yo allá contigo… ¡Te amo, te extraño",
   "Hay algo en ti que me resulta adictivo, quizás sea tu sonrisa, o tu mirada, o tus labios o todo junto.",
   "Prefiero estar contigo y que me salga mal, a no estar contigo nunca.",
-  
+  "No te prometo perfección, pero sí un corazón lleno de amor.",
+  "Eres todo lo eso que nunca creí encontrar.",
+  "Nunca conocí a alguien que me llenara de tanto amor con solo una mirada.",
+  "Tengo ganas de un futuro contigo.",
+  "Yo sin ganas de enamorarme y vienes tú y me sonríes.",
 
 ];
 
-const FloatingHeart = ({ onComplete }) => {
+const FloatingHeart: React.FC<FloatingHeartProps> = ({ onComplete }) => {
   useEffect(() => {
     const timer = setTimeout(onComplete, 3000);
     return () => clearTimeout(timer);
@@ -44,8 +56,8 @@ const FloatingHeart = ({ onComplete }) => {
 };
 
 const LoveApp = () => {
-  const [quote, setQuote] = useState('Catherine, te amo ❤️');
-  const [hearts, setHearts] = useState([]);
+  const [quote, setQuote] = useState<string>('Catherine, te amo ❤️');
+  const [hearts, setHearts] = useState<HeartType[]>([]);
 
   // Generar nuevo corazón cada segundo
   useEffect(() => {
@@ -68,7 +80,7 @@ const LoveApp = () => {
     };
   }, []);
 
-  const removeHeart = (id) => {
+  const removeHeart = (id: number) => {
     setHearts(prev => prev.filter(heart => heart.id !== id));
   };
 
@@ -104,7 +116,7 @@ const LoveApp = () => {
       ))}
 
       {/* Estilos para la animación de float */}
-      <style jsx global>{`
+      <style>{`
         .animate-float {
           animation: float 3s linear forwards;
         }
