@@ -26,7 +26,7 @@ const loveQuotes: string[]  = [
   "Hay algo en ti que me resulta adictivo, quizás sea tu sonrisa, o tu mirada, o tus labios o todo junto.",
   "Prefiero estar contigo y que me salga mal, a no estar contigo nunca.",
   "No te prometo perfección, pero sí un corazón lleno de amor.",
-  "Eres todo lo eso que nunca creí encontrar.",
+  "Eres todo lo que nunca creí encontrar.",
   "Nunca conocí a alguien que me llenara de tanto amor con solo una mirada.",
   "Tengo ganas de un futuro contigo.",
   "Yo sin ganas de enamorarme y vienes tú y me sonríes.",
