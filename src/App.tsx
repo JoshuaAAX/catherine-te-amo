@@ -89,7 +89,7 @@ const LoveApp = () => {
       {/* Contenedor principal */}
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
 
-        <div className="mb-6">
+        <div translate="no" className="mb-6">
           <img 
             src="/cat.jpg"  // Reemplaza con la ruta de tu imagen
             alt="Catherine" 
@@ -97,9 +97,9 @@ const LoveApp = () => {
           />
         </div>
         
-        <div className= "flex items-center justify-between space-x-5">
+        <div translate="no" className= "flex items-center justify-between space-x-5">
         {/* Título */}
-        <h1 className="text-6xl font-bold text-red-500 mb-8">Catherine </h1>
+        <h1 translate="no" className="text-6xl font-bold text-red-500 mb-8">Catherine </h1>
         
         {/* Corazón central */}
         <Heart 
